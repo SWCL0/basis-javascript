@@ -5,36 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #groep {
+        #groep, #groep1, #groep2 {
             border: 1px black solid;
             padding: 5px;
         }
+
+        #groep2 {
+            margin-top: 5px;
+        }
     </style>
+    <script>
+        function MyFunction() {
+            document.getElementById('demo7').innerHTML = "Dit stukje tekst is aangepast :)"
+        }
+    </script>
 </head>
 <body>
     <h1>Welkom bij mijn JavaScript oefen site</h1>
-    <div class="tijd-weergeven" id="groep">
-        <h2>Eerste keer met JavaScript werken!</h2>
-        <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">Klik op mij en krijg de datum en tijd!</button>
-        <p id="demo1"></p>        
+    <div id="groep1">
+        <div class="tijd-weergeven" id="groep">
+            <h2>Eerste keer met JavaScript werken!</h2>
+            <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">Klik op mij en krijg de datum en tijd!</button>
+            <p id="demo1"></p>        
+        </div>
+        <div class="element-vinden" id="groep">
+            <h2>Wat kan JavaScript? 1/5</h2>
+            <button type="button" onclick="document.getElementById('demo2').innerHTML = 'Hallo JavaScript'">Klik mij!</button>
+            <p id="demo2">JavaScript kan html code aanpassen!</p>
+        </div>
+        <div class="aanpassen-source-element" id="groep">
+            <h2>Wat kan JavaScript? 2/5</h2>
+            <p>JavaScript kan de HTML attribute value veranderen.</p>
+            <p>In dit geval veranderd JavaScript de value van de src (source) attribute van een foto.</p>
+            <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Zet de lamp aan</button>
+            <img id="myImage" src="pic_bulboff.gif" style="width: 100px;">
+            <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Zet de lamp uit</button>    
+        </div>
+        <div class="aanpassen-style" id="groep">
+            <h2>Wat kan JavaScript 3/5</h2>
+            <p id="demo3">JavaScript kan de style veranderen van een HTML element.</p>
+            <button type="button" onclick="document.getElementById('demo3').style.fontSize='35px'">Klik mij!</button>
+        </div>
+        <div class="element-verstoppen" id="groep">
+            <h2>Wat kan JavaScript 4/5</h2>
+            <p id="demo4">JavaScript kan HTML elementen verstoppen.</p>
+            <button type="button" onclick="document.getElementById('demo4').style.display='none'">Klik mij!</button>
+        </div>
+        <div class="element-vertonen" id="groep">
+            <h2>Wat kan JavaScript 5/5</h2>
+            <p id="demo5" style="display: none;">JavaScript kan HTML elementen vertonen.</p>
+            <button type="button" onclick="document.getElementById('demo5').style.display='block'">Klik mij!</button>
+        </div>        
     </div>
-    <div class="element-vinden" id="groep">
-        <h2>Wat kan JavaScript? 1/3</h2>
-        <button type="button" onclick="document.getElementById('demo2').innerHTML = 'Hallo JavaScript'">Click Me!</button>
-        <p id="demo2">JavaScript kan html code aanpassen!</p>
-    </div>
-    <div class="aanpassen-source-element" id="groep">
-        <h2>Wat kan JavaScript? 2/3</h2>
-        <p>JavaScript kan de HTML attribute value veranderen.</p>
-        <p>In dit geval veranderd JavaScript de value van de src (source) attribute van een foto.</p>
-        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Zet de lamp aan</button>
-        <img id="myImage" src="pic_bulboff.gif" style="width: 100px;">
-        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Zet de lamp uit</button>    
-    </div>
-    <div class="aanpassen-style" id="groep">
-        <h2>Wat kan JavaScript 3/3</h2>
-        <p id="demo3">JavaScript kan de style veranderen van een HTML element.</p>
-        <button type="button" onclick="document.getElementById('demo3').style.fontSize='35px'">Klik Mij!</button>
+    <div id="groep2">
+        <div class="script-tag" id="groep">
+            <h2>JavaScript in Body</h2>
+            <p id="demo6"></p>
+            <script>
+                document.getElementById('demo6').innerHTML = "My first JavaScript"
+            </script>
+        </div>
+        <div class="script-in-head" id="groep">
+            <h2>JavaScript in Head</h2>
+            <p id="demo7">Een stukje tekst</p>
+            <button type="button" onclick="MyFunction()">Klik mij!</button>
+        </div>
     </div>
 </body>
 </html>
