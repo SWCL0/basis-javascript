@@ -15,7 +15,7 @@
         }
     </style>
     <script>
-        function MyFunction() {
+        function MyFunction2() {
             document.getElementById('demo7').innerHTML = "Dit stukje tekst is aangepast :)"
         }
     </script>
@@ -60,15 +60,18 @@
     <div id="groep2">
         <div class="script-tag" id="groep">
             <h2>JavaScript in Body</h2>
-            <p id="demo6"></p>
+            <p id="demo6">Een stukje tekst</p>
+            <button type="button" onclick="myFunction1()">Klik mij!</button>
             <script>
-                document.getElementById('demo6').innerHTML = "My first JavaScript"
+                function myFunction1() {
+                    document.getElementById('demo6').innerHTML = "Dit stukje tekst is aangepast :)"                    
+                }
             </script>
         </div>
         <div class="script-in-head" id="groep">
             <h2>JavaScript in Head</h2>
             <p id="demo7">Een stukje tekst</p>
-            <button type="button" onclick="MyFunction()">Klik mij!</button>
+            <button type="button" onclick="MyFunction2()">Klik mij!</button>
         </div>
     </div>
 </body>
