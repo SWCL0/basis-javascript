@@ -13,9 +13,17 @@
         <p id="demo1"></p>        
     </div>
     <div class="element-vinden" style="border: 1px solid black; padding: 5px;">
-        <h2>Wat kan JavaScript?</h2>
+        <h2>Wat kan JavaScript? 1/2</h2>
         <button type="button" onclick="document.getElementById('demo2').innerHTML = 'Hallo JavaScript'">Click Me!</button>
         <p id="demo2">JavaScript kan html code aanpassen!</p>
+    </div>
+    <div class="aanpassen-source-element">
+        <h2>Wat kan JavaScript? 2/2</h2>
+        <p>JavaScript kan de HTML attribute value veranderen.</p>
+        <p>In dit geval veranderd JavaScript de value van de src (source) attribute van een foto.</p>
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Zet de lamp aan</button>
+        <img id="myImage" src="pic_bulboff.gif" style="width: 100px;">
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Zet de lamp uit</button>    
     </div>
 </body>
 </html>
