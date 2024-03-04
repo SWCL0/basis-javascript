@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #groep, #groep1, #groep2 {
+        #groep, #groep1, #groep2, #groep3 {
             border: 1px black solid;
             padding: 5px;
         }
+        #groep {
+            background-color: white;
+        }
 
-        #groep2 {
+        #groep2, #groep3 {
             margin-top: 5px;
         }
     </style>
@@ -22,19 +25,19 @@
 </head>
 <body>
     <h1>Welkom bij mijn JavaScript oefen site</h1>
-    <div id="groep1">
+    <div id="groep1" style="background-color: darkolivegreen;">
         <div class="tijd-weergeven" id="groep">
-            <h2>Eerste keer met JavaScript werken!</h2>
+            <h2>Eerste keer met JavaScript werken! 1/6</h2>
             <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">Klik op mij en krijg de datum en tijd!</button>
             <p id="demo1"></p>        
         </div>
         <div class="element-vinden" id="groep">
-            <h2>Wat kan JavaScript? 1/5</h2>
+            <h2>Wat kan JavaScript? 2/6</h2>
             <button type="button" onclick="document.getElementById('demo2').innerHTML = 'Hallo JavaScript'">Klik mij!</button>
             <p id="demo2">JavaScript kan html code aanpassen!</p>
         </div>
         <div class="aanpassen-source-element" id="groep">
-            <h2>Wat kan JavaScript? 2/5</h2>
+            <h2>Wat kan JavaScript? 3/6</h2>
             <p>JavaScript kan de HTML attribute value veranderen.</p>
             <p>In dit geval veranderd JavaScript de value van de src (source) attribute van een foto.</p>
             <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Zet de lamp aan</button>
@@ -42,24 +45,24 @@
             <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Zet de lamp uit</button>    
         </div>
         <div class="aanpassen-style" id="groep">
-            <h2>Wat kan JavaScript 3/5</h2>
+            <h2>Wat kan JavaScript 4/6</h2>
             <p id="demo3">JavaScript kan de style veranderen van een HTML element.</p>
             <button type="button" onclick="document.getElementById('demo3').style.fontSize='35px'">Klik mij!</button>
         </div>
         <div class="element-verstoppen" id="groep">
-            <h2>Wat kan JavaScript 4/5</h2>
+            <h2>Wat kan JavaScript 5/6</h2>
             <p id="demo4">JavaScript kan HTML elementen verstoppen.</p>
             <button type="button" onclick="document.getElementById('demo4').style.display='none'">Klik mij!</button>
         </div>
         <div class="element-vertonen" id="groep">
-            <h2>Wat kan JavaScript 5/5</h2>
+            <h2>Wat kan JavaScript 6/6</h2>
             <p id="demo5" style="display: none;">JavaScript kan HTML elementen vertonen.</p>
             <button type="button" onclick="document.getElementById('demo5').style.display='block'">Klik mij!</button>
         </div>        
     </div>
-    <div id="groep2">
+    <div id="groep2" style="background-color: darkblue;">
         <div class="script-tag" id="groep">
-            <h2>JavaScript in Body</h2>
+            <h2>JavaScript in Body 1/3</h2>
             <p id="demo6">Een stukje tekst</p>
             <button type="button" onclick="myFunction1()">Klik mij!</button>
             <script>
@@ -69,15 +72,33 @@
             </script>
         </div>
         <div class="script-in-head" id="groep">
-            <h2>JavaScript in Head</h2>
+            <h2>JavaScript in Head 2/3</h2>
             <p id="demo7">Een stukje tekst</p>
             <button type="button" onclick="MyFunction2()">Klik mij!</button>
         </div>
         <div class="javascript-vanuit-andere-file" id="groep">
-            <h2>External JavaScript</h2>
+            <h2>External JavaScript 3/3</h2>
             <p id="demo8">Een stukje tekst</p>
             <button type="button" onclick="myFunction3()">Klik mij!</button>
             <script src="myScript.js"></script>
+        </div>
+    </div>
+    <div id="groep3" style="background-color: darkgoldenrod;">
+        <div class="innerHTML" id="groep">
+            <h2>Gebruik innerHTML 1/4</h2>
+            <p>GEBRUIK NOOIT <strong>document.write()</strong> DIT VERWIJDERD ALLE HTML ERBOVEN</p>
+            <p id="demo9"></p>
+            <button type="button" onclick="document.getElementById('demo9').innerHTML = (5 + 6)">Klik mij!</button>
+        </div>
+        <div class="window-alert" id="groep">
+            <h2>Gebruik window.alert 2/4</h2>
+            <p>Je kan ook een alert box gebruiken</p>
+            <button type="button" onclick="window.alert(5 + 6);">Klik mij!</button>
+        </div>
+        <div class="alert" id="groep">
+            <h2>gebruik alert 3/4</h2>
+            <p>Je kan dit ook zonder window, dan gebruik je alleen alert</p>
+            <button type="button" onclick="alert(5 + 6);">Klik mij!</button>
         </div>
     </div>
 </body>
