@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #groep {
+            border: 1px black solid;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Welkom bij mijn JavaScript oefen site</h1>
-    <div class="tijd-weergeven" style="border: 1px solid black; padding: 5px;">
+    <div class="tijd-weergeven" id="groep">
         <h2>Eerste keer met JavaScript werken!</h2>
         <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">Klik op mij en krijg de datum en tijd!</button>
         <p id="demo1"></p>        
     </div>
-    <div class="element-vinden" style="border: 1px solid black; padding: 5px;">
-        <h2>Wat kan JavaScript? 1/2</h2>
+    <div class="element-vinden" id="groep">
+        <h2>Wat kan JavaScript? 1/3</h2>
         <button type="button" onclick="document.getElementById('demo2').innerHTML = 'Hallo JavaScript'">Click Me!</button>
         <p id="demo2">JavaScript kan html code aanpassen!</p>
     </div>
-    <div class="aanpassen-source-element">
-        <h2>Wat kan JavaScript? 2/2</h2>
+    <div class="aanpassen-source-element" id="groep">
+        <h2>Wat kan JavaScript? 2/3</h2>
         <p>JavaScript kan de HTML attribute value veranderen.</p>
         <p>In dit geval veranderd JavaScript de value van de src (source) attribute van een foto.</p>
         <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Zet de lamp aan</button>
         <img id="myImage" src="pic_bulboff.gif" style="width: 100px;">
         <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Zet de lamp uit</button>    
+    </div>
+    <div class="aanpassen-style" id="groep">
+        <h2>Wat kan JavaScript 3/3</h2>
+        <p id="demo3">JavaScript kan de style veranderen van een HTML element.</p>
+        <button type="button" onclick="document.getElementById('demo3').style.fontSize='35px'">Klik Mij!</button>
     </div>
 </body>
 </html>
